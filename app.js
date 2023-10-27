@@ -2,7 +2,14 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.get("/", (req, res) => res.type('html').send(html));
+// Set the static directory to serve the Flutter web app
+app.use(express.static('public'));
+app.get("/", (req, res) =>{
+    res.sendFile(__dirname + '/public/index.html');
+}
+
+)
+//res.type('html').send(html));
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
