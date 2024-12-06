@@ -4,6 +4,12 @@ const port = process.env.PORT || 3001;
 
 // Set the static directory to serve the Flutter web app
 app.use(express.static('public'));
+
+app.get("/data", (req, res) =>{
+  res.json({"name ":"hamza"})
+}
+)
+
 app.get("/", (req, res) =>{
     res.sendFile(__dirname + '/public/index.html');
 }
