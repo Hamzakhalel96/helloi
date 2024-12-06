@@ -1,6 +1,6 @@
 {
-    "name": "webapp",
-    "short_name": "webapp",
+    "name": "appweb",
+    "short_name": "appweb",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
